@@ -1,0 +1,170 @@
+/* ROOT VARIABLES */
+:root {
+  --bg-color: #080111;
+}
+
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Prevent layout shift when scrollbar appears/disappears */
+  scrollbar-gutter: stable;
+}
+
+body {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* CONTROLLED BY JAVASCRIPT */
+body.lock-scroll {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* PARALLAX SCENE */
+.parallax-scene {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.5s ease; /* Prevent flicker during load */
+}
+
+.gsap-ready .parallax-scene {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* BASE LAYER SETUP */
+.layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  pointer-events: none;
+}
+
+/* LAYER CONFIGURATION */
+.sky {
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.sky img {
+  width: 120%;
+  height: 120%;
+  object-fit: cover;
+}
+
+.porsche-text {
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2000px;
+}
+
+.porsche-text h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 11.5vw;
+  letter-spacing: -0.5vw;
+  color: white;
+}
+
+.base-platform {
+  z-index: 3;
+  justify-content: center;
+  align-items: center;
+}
+
+.base-platform img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.car-hero {
+  z-index: 4;
+  justify-content: center;
+  align-items: center;
+}
+
+.car-hero img {
+  width: 80vw;
+  height: auto;
+}
+
+/* FLOWER LAYERS */
+.flower-left {
+  z-index: 5;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.flower-left img {
+  width: 100vw;
+  height: auto;
+}
+
+.flower-right {
+  z-index: 6;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.flower-right img {
+  width: 100vw;
+  height: auto;
+}
+
+/* TRANSITION SECTION */
+.content-spacer {
+  height: 100vh;
+  background-color: var(--bg-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+}
+
+/* PAGE 2 CONTENT */
+.page2-content {
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transform: translateY(100%); /* Positioned below viewport */
+}
+
+.next-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background: linear-gradient(to bottom, #1a0033, #080111);
+  /* opacity: 0; */
+}
+
+.next-text {
+  font-family: "Inter", sans-serif;
+  font-size: 5vw;
+  color: white;
+  /* opacity: 0; */
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <!-- Basic meta configuration -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Porsche Interactive Experience</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main class="viewport-wrapper">
+      <!-- Parallax main scene -->
+      <section class="parallax-scene">
+        <!-- Sky background layer -->
+        <div class="layer sky">
+          <img src="assets/background.png" alt="Sky" />
+        </div>
+
+        <!-- Porsche title layer -->
+        <div class="layer porsche-text">
+          <h1>PORSCHE</h1>
+        </div>
+
+        <!-- Base platform layer -->
+        <div class="layer base-platform">
+          <img src="assets/transparan-base.png" alt="Platform" />
+        </div>
+
+        <!-- Main car hero layer -->
+        <div class="layer car-hero">
+          <img src="assets/mobil.png" alt="Porsche 911" />
+        </div>
+
+        <!-- Decorative flower layers -->
+        <div class="layer flower flower-left">
+          <img src="assets/bunga-2.png" alt="Flower Left" />
+        </div>
+
+        <div class="layer flower flower-right">
+          <img src="assets/bunga-1.png" alt="Flower Right" />
+        </div>
+
+        <!-- Second page transition content -->
+        <div class="layer page2-content">
+          <div class="next-bg"></div>
+          <h2 class="next-text">THE FUTURE IS HERE</h2>
+        </div>
+      </section>
+
+      <!-- Spacer section after parallax scene -->
+      <section class="content-spacer">
+        <h2>The Legend Continues</h2>
+      </section>
+    </main>
+
+    <!-- GSAP core library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- GSAP ScrollTrigger plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Main JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
