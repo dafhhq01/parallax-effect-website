@@ -129,18 +129,6 @@ body.lock-scroll {
   height: auto;
 }
 
-/* TRANSITION SECTION */
-.content-spacer {
-  height: 100vh;
-  background-color: var(--bg-color);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  color: white;
-}
-
 /* PAGE 2 CONTENT */
 .page2-content {
   z-index: 10;
@@ -162,9 +150,40 @@ body.lock-scroll {
   /* opacity: 0; */
 }
 
-.next-text {
+/* PAGE 2 INNER CONTENT */
+.page2-inner {
+  position: relative;
+  max-width: 900px;
+  text-align: center;
+  pointer-events: auto;
+}
+
+/* PAGE 2 HEADLINE */
+.page2-headline {
   font-family: "Inter", sans-serif;
-  font-size: 5vw;
+  font-size: 6vw;
+  letter-spacing: -0.3vw;
+  margin-bottom: 24px;
   color: white;
-  /* opacity: 0; */
+}
+
+/* PAGE 2 SUBHEADLINE */
+.page2-subheadline {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  opacity: 0.85;
+  margin-bottom: 40px;
+  color: white;
+}
+
+/* PAGE 2 BUTTON */
+.page2-button {
+  background: #7D39A9;
+  color: white;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  cursor: pointer;
 }
